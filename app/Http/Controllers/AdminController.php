@@ -13,6 +13,7 @@ class AdminController extends Controller
         $this->middleware('auth:admin');
     }
 
+    // Menampilkan Halaman Dashboard Pada Halaman Admin
     public function dashboard()
     {
         return view('admin.dashboard');
