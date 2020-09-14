@@ -24,6 +24,13 @@ class CreateTempCartTable extends Migration
                  ->on('products')
                  ->onUpdate('cascade')
                  ->onDelete('cascade');
+            
+            $table->foreign('user_id')
+                 ->references('id')
+                 ->on('users')
+                 ->onUpdate('cascade')
+                 ->onDelete('cascade');
+            
         });
     }
 
