@@ -12,6 +12,7 @@ class adminNotifController extends Controller
         $this->middleware('auth:admin');
     }
 
+    // Menampilkan Notifikasi Order Pada Halaman Admin
     public function showNotif()
     {
         $notif = Notif::orderBy('notif_id', 'DESC')->get();
