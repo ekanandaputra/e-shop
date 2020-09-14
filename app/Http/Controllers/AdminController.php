@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+    // Membuat Controller ini hanya dapat diaksis oleh admin
     public function __construct()
     {
         $this->middleware('auth:admin');
